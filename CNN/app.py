@@ -5,11 +5,12 @@ from PIL import Image
 
 import os
 
-port = int(os.environ.get("PORT", 5000))  # Use PORT env var on Render, or 5000 locally
-app.run(host='0.0.0.0', port=port, debug=True)
+
 
 
 app = Flask(__name__)
+port = int(os.environ.get("PORT", 5000))  # Use PORT env var on Render, or 5000 locally
+app.run(host='0.0.0.0', port=port, debug=True)
 model = load_model('CNN/cnn_cifar10_model.h5')
 
 class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
