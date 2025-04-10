@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 
 app = Flask(__name__)
-model = load_model('cnn_cifar10_model.h5')
+model = load_model('CNN/cnn_cifar10_model.h5')
 
 class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
                'dog', 'frog', 'horse', 'ship', 'truck']
